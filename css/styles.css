@@ -706,3 +706,64 @@ ul {
 
 
 
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    min-height: 581px;
+
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+.button-modal{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    border-radius: 50%;  
+}
+.button-modal:hover .button-modal-icon{
+    fill: var(--logo-color);
+}
+.button-modal-icon{
+    display: block;
+    text-align: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    }
+

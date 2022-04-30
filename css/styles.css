@@ -609,6 +609,7 @@ letter-spacing: 0.03em;
 .portfolio-btn.current{
   background-color: var(--logo-color);
   color: var(--primary-white-color);
+  position: relative;
 }
 
 .ul.button {
